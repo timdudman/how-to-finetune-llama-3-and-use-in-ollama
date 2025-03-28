@@ -17,9 +17,9 @@ load_in_4bit = True  # Use 4bit quantization to reduce memory usage
 
 
 def main():
-    # Use Llama 3.1 with 8 billion parameters, binary neural network and 4-bit quantisation
+    # Use Llama 3.2 with 1 billion parameters, binary neural network and 4-bit quantisation
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name="unsloth/llama-3.1-8b-bnb-4bit",
+        model_name="unsloth/llama-3.2-1b-bnb-4bit",
         max_seq_length=max_seq_length,
         dtype=dtype,
         load_in_4bit=load_in_4bit,
