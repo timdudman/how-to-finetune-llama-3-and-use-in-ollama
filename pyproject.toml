@@ -1,0 +1,29 @@
+[project]
+name = "how-to-finetune-llama-3-and-use-in-ollama"
+version = "0.1.0"
+description = "https://docs.unsloth.ai/basics/tutorial-how-to-finetune-llama-3-and-use-in-ollama"
+license = "Copyright (C) Riskaware 2025"
+readme = "README.md"
+authors = [
+  {name = "Tim Dudman", email = "tim.dudman@riskaware.co.uk"}
+]
+requires-python = ">=3.12"
+dependencies = [
+    "datasets>=3.4.1",
+    "ollama>=0.4.7",
+    "peft>=0.15.0",
+    "torch>=2.6.0",
+    "transformers>=4.50.2",
+    "trl>=0.15.2",
+    "unsloth>=2025.3.19",
+]
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu124" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
